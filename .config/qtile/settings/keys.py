@@ -3,15 +3,12 @@ from libqtile.lazy import lazy
 from libqtile import layout
 # from libqtile import qtile, widget
 import os, subprocess
-
+from settings import settings
 # from time import sleep
 import threading
 
 mod = "mod4"
-home = os.path.expanduser('~')
-scripts = home + "/.config/qtile/scripts"
-config = home + "/.config/qtile/config.d"
-terminal = f"kitty --single-instance -c {config}/kitty/kitty.conf"
+settings = settings()
 
 # Prompt
 @lazy.function
@@ -37,7 +34,7 @@ keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     Key([mod], "p", prompt, desc="Use Prompt"),
-    Key([mod], "l", lazy.spawn(f"{scripts}/lockscreen.sh"), desc="Lock Screen"),
+    Key([mod], "l", lazy.spawn(f"{settings["dirs"]["SCRIPTS"]}/lockscreen.sh"), desc="Lock Screen"),
     # Switch between windows
     Key([mod], "left", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "right", lazy.layout.right(), desc="Move focus to right"),
@@ -67,9 +64,9 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "Return", lazy.spawn(settings["terminal"]["DEFAULT"]), desc="Launch terminal"),
     # Toggle between different layouts as defined below
-    Key([mod], "d", lazy.spawn(f"rofi -config {config}/rofi/config.rasi -show drun"), desc="Open rofi"),
+    Key([mod], "d", lazy.spawn(settings["rofi"]["DEFAULT"]), desc="Open rofi"),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(

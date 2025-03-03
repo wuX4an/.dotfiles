@@ -28,10 +28,10 @@ from libqtile import layout, qtile, hook
 from libqtile.config import Group, Match
 from libqtile.lazy import lazy
 import os, subprocess
+from settings import settings
+settings = settings()
 
-
-home = os.path.expanduser('~')
-scripts = home + "/.config/qtile/scripts"
+scripts = settings["dirs"]["SCRIPTS"]
 
 # # Autostart
 @hook.subscribe.startup_once
@@ -51,8 +51,8 @@ elif qtile.core.name == "wayland":
 from settings.screens import screens
 from settings.keys import keys, mouse
 from settings.layouts import layouts
-from settings.theme import widget_defaults
 
+widget_defautls = settings["widget_defautls"]["DEFAULT"]
 
 
 # Suspend
