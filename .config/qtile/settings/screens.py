@@ -1,12 +1,12 @@
 from libqtile import bar, widget
-from qtile_extras.widget import Visualiser
 from libqtile.config import Screen
 from libqtile import qtile
-import os, subprocess, socket
-# from .theme import *
-from .modules.widgets_functions import check_internet, check_bluetooth
-from .modules import openmeteo
-import subprocess
+
+### Modules ###
+
+from .modules.widgets.wifi import wifi
+from .modules.widgets.bluetooth import bluetooth
+import os
 
 home = os.path.expanduser('~')
 images = home + "/.config/qtile/settings/images"
@@ -102,7 +102,7 @@ screens = [
                     filename=f'{images}/6.png',
                 ),
                 widget.GenPollText(
-                    func=check_internet,
+                    func=wifi,
                     update_interval=5,
                     font="Symbols Nerd Font",
                     fontsize=18,
@@ -112,7 +112,7 @@ screens = [
                     filename=f'{images}/2.png',
                 ),
                 widget.GenPollText(
-                    func=check_bluetooth,
+                    func=bluetooth,
                     mouse_callbacks={"Button1": open_bluetui},
                     update_interval=5,
                     font="Symbols Nerd Font",
