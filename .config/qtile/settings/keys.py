@@ -9,7 +9,7 @@ import threading
 
 mod = "mod4"
 home = os.path.expanduser('~')
-scripts = home + "/.config/qtile/ui/scripts"
+scripts = home + "/.config/qtile/settings/scripts"
 config = home + "/.config/qtile/config.d"
 terminal = f"kitty --single-instance -c {config}/kitty/kitty.conf"
 

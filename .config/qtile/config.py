@@ -31,7 +31,7 @@ import os, subprocess
 
 
 home = os.path.expanduser('~')
-scripts = home + "/.config/qtile/ui/scripts"
+scripts = home + "/.config/qtile/settings/scripts"
 
 # # Autostart
 @hook.subscribe.startup_once
@@ -48,10 +48,10 @@ elif qtile.core.name == "wayland":
     }
 
 # UI
-from ui.screens import screens
-from ui.keys import keys, mouse
-from ui.layouts import layouts
-from ui.theme import widget_defaults
+from settings.screens import screens
+from settings.keys import keys, mouse
+from settings.layouts import layouts
+from settings.theme import widget_defaults
 
 
 
