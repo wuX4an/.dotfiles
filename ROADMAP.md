@@ -10,11 +10,11 @@
 ├── config.py
 ├── settings.jsonc aqui van las constats tmb
 ├── config.d/
-├── modules/
 ├── scripts/
 ├── wallpapers/
-└── config/
+└── settings/
     ├── images/
+    ├── modules/
     ├── keys.py
     ├── layouts.py
     ├── screens.py

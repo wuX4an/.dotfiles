@@ -31,7 +31,7 @@ import os, subprocess
 
 
 home = os.path.expanduser('~')
-scripts = home + "/.config/qtile/settings/scripts"
+scripts = home + "/.config/qtile/scripts"
 
 # # Autostart
 @hook.subscribe.startup_once
