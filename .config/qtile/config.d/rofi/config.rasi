@@ -7,4 +7,4 @@ configuration {
     display-filebrowser: "󰉋 filebrowser:";
 }
 
-@theme "~/.config/qtile/config/rofi/theme.rasi"
+@theme "~/.config/qtile/config.d/rofi/theme.rasi"

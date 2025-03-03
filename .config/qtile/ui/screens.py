@@ -10,7 +10,7 @@ import subprocess
 
 home = os.path.expanduser('~')
 images = home + "/.config/qtile/ui/images"
-open_in_term = f"kitty --class='floatterm' --config {home}/.config/qtile/config/kitty/apps.conf --single-instance"
+open_in_term = f"kitty --class='floatterm' --config {home}/.config/qtile/config.d/kitty/apps.conf --single-instance"
 
 #### Custom Functions ####
 

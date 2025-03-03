@@ -1,5 +1,7 @@
 #!/bin/sh
 
-picom --config ~/.config/qtile/config/picom/picom.conf &
-dunst -conf ~/.config/qtile/config/dunst/dunstrc &
-mpd ~/.config/qtile/config/mpd/mpd.conf &
+CONFIG=$HOME/.config/qtile/config.d
+
+picom --config $CONFIG/picom/picom.conf &
+dunst -conf $CONFIG/dunst/dunstrc &
+mpd $CONFIG/mpd/mpd.conf &

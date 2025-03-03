@@ -10,8 +10,8 @@ import threading
 mod = "mod4"
 home = os.path.expanduser('~')
 scripts = home + "/.config/qtile/ui/scripts"
-config = home + "/.config/qtile/config"
-terminal = f"kitty --single-instance -c {home}/.config/qtile/config/kitty/kitty.conf"
+config = home + "/.config/qtile/config.d"
+terminal = f"kitty --single-instance -c {config}/kitty/kitty.conf"
 
 # Prompt
 @lazy.function
