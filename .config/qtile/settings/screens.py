@@ -7,10 +7,12 @@ from libqtile import qtile
 from .modules.widgets.wifi import wifi
 from .modules.widgets.bluetooth import bluetooth
 import os
-
+from settings import settings
 home = os.path.expanduser('~')
-images = home + "/.config/qtile/settings/images"
-open_in_term = f"kitty --class='floatterm' --config {home}/.config/qtile/config.d/kitty/apps.conf --single-instance"
+
+settings = settings()
+images = settings["dirs"]["IMAGES"]
+open_in_term = settings["terminal"]["FLOATING"]
 
 #### Custom Functions ####
 
