@@ -9,7 +9,7 @@
 + pamixer
 ### BRILLO
 + brightnessctl
-### PANTALLA DE BLOQUE
+### PANTALLA DE BLOQUEO
 + i3lock-color
 + imagemagick
 + maim
@@ -18,8 +18,9 @@
 + rmpc
 + mpc
 + alsa-utils
-### MENU
-rofi
+### MENUS
+rofi (apss)
+bluetui (bluetooth)
 ### ICONOS
 papirus-icon-theme
 bibata-cursors
