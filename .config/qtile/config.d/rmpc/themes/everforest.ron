@@ -5,7 +5,7 @@
     album_art_position: Left,
     album_art_width_percent: 40,
     default_album_art_path: None,
-    show_song_table_header: true,
+    show_song_table_header: false,
     draw_borders: true,
     browser_column_widths: [20, 38, 42],
     background_color: None,
@@ -70,12 +70,15 @@
                     (kind: Text("]"), style: (fg: "#e69875", modifiers: "Bold"))
                 ],
                 center: [
-                    (kind: Property(Song(Title)), style: (modifiers: "Bold"),
-                        default: (kind: Text("Ninguna canción"), style: (modifiers: "Bold"))
+                    (kind: Property(Song(Artist)), style: (fg: "#e69875", modifiers: "Bold"),
+                        default: (kind: Text("Desconocido"), style: (fg: "#e69875", modifiers: "Bold"))
+                    ),
+                    (kind: Text(" - ")),
+                    (kind: Property(Song(Album)),
+                        default: (kind: Text("Album Desconocido"))
                     )
                 ],
                 right: [
-                    (kind: Property(Widget(Volume)), style: (fg: "#a7c080"))
                 ]
             ),
             (
@@ -88,15 +91,6 @@
                     (kind: Text(" kbps)"))
                 ],
                 center: [
-                    (kind: Property(Song(Artist)), style: (fg: "#e69875", modifiers: "Bold"),
-                        default: (kind: Text("Desconocido"), style: (fg: "#e69875", modifiers: "Bold"))
-                    ),
-                    (kind: Text(" - ")),
-                    (kind: Property(Song(Album)),
-                        default: (kind: Text("Album Desconocido"))
-                    )
-                ],
-                right: [
                     (
                         kind: Property(Widget(States(
                             active_style: (fg: "#dbbc7f", modifiers: "Bold"),
@@ -104,6 +98,9 @@
                         ),
                         style: (fg: "#7a8478")
                     ),
+                ],
+                right: [
+                    (kind: Property(Widget(Volume)), style: (fg: "#a7c080"))
                 ]
             ),
         ],
