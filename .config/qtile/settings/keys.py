@@ -4,6 +4,7 @@ from libqtile import layout
 # from libqtile import qtile, widget
 import os, subprocess
 from settings import settings
+from .modules.windows.controls import move_window, resize_window
 # from time import sleep
 import threading
 
@@ -43,16 +44,17 @@ keys = [
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "left", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "right", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([mod, "shift"], "down", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "up", lazy.layout.shuffle_up(), desc="Move window up"),
-    # Grow windows. If current window is on the edge of screen and direction
+    Key([mod, "shift"], "left", move_window("left"), desc="Move window to the left"),
+    Key([mod, "shift"], "right", move_window("right"), desc="Move window to the right"),
+    Key([mod, "shift"], "down", move_window("down"), desc="Move window down"),
+    Key([mod, "shift"], "up", move_window("up"), desc="Move window up"),    # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "left", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "control"], "right", lazy.layout.grow_right(), desc="Grow window to the right"),
-    Key([mod, "control"], "down", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "control"], "up", lazy.layout.grow_up(), desc="Grow window up"),
+    Key([mod, "control"], "left", resize_window("left", 100), desc="Grow window to the left"),
+    Key([mod, "control"], "right", resize_window("right", 100), desc="Grow window to the right"),
+    Key([mod, "control"], "down", resize_window("down", 100), desc="Grow window down"),
+    Key([mod, "control"], "up", resize_window("up", 100), desc="Grow window up"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -96,24 +98,24 @@ keys = [
 
     # LAYOUTS
     # TreeTab
-    Key([mod, "shift"], "left",
-        lazy.layout.shuffle_left(),
-        lazy.layout.move_left().when(layout=["treetab"]),
-        desc="Move window to the left/move tab left in treetab"),
-    Key([mod, "shift"], "right",
-        lazy.layout.shuffle_right(),
-        lazy.layout.move_right().when(layout=["treetab"]),
-        desc="Move window to the right/move tab right in treetab"),
-    Key([mod, "shift"], "down",
-        lazy.layout.shuffle_down(),
-        lazy.layout.section_down().when(layout=["treetab"]),
-        desc="Move window down/move down a section in treetab"
-    ),
-    Key([mod, "shift"], "up",
-        lazy.layout.shuffle_up(),
-        lazy.layout.section_up().when(layout=["treetab"]),
-        desc="Move window downup/move up a section in treetab"
-    ),
+    # Key([mod, "shift"], "left",
+    #     lazy.layout.shuffle_left(),
+    #     lazy.layout.move_left().when(layout=["treetab"]),
+    #     desc="Move window to the left/move tab left in treetab"),
+    # Key([mod, "shift"], "right",
+    #     lazy.layout.shuffle_right(),
+    #     lazy.layout.move_right().when(layout=["treetab"]),
+    #     desc="Move window to the right/move tab right in treetab"),
+    # Key([mod, "shift"], "down",
+    #     lazy.layout.shuffle_down(),
+    #     lazy.layout.section_down().when(layout=["treetab"]),
+    #     desc="Move window down/move down a section in treetab"
+    # ),
+    # Key([mod, "shift"], "up",
+    #     lazy.layout.shuffle_up(),
+    #     lazy.layout.section_up().when(layout=["treetab"]),
+    #     desc="Move window downup/move up a section in treetab"
+    # ),
     Key([mod, "control"], "9", lazy.to_screen(1), lazy.group["9"].toscreen(1), desc="Move Screen 1 to WS 9"),
 ]
 
