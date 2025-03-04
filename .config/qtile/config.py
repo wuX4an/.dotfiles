@@ -52,7 +52,7 @@ from settings.screens import screens
 from settings.keys import keys, mouse
 from settings.layouts import layouts
 
-widget_defautls = settings["widget_defautls"]["DEFAULT"]
+widget_defaults = settings["widget_defautls"]["DEFAULT"]
 
 
 # Suspend
