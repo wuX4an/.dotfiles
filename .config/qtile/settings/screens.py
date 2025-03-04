@@ -24,6 +24,9 @@ def open_pulsemixer():
 def open_bluetui():
     qtile.cmd_spawn(f"{open_in_term} bluetui")
 
+def open_rmpc():
+    qtile.cmd_spawn(f"{open_in_term} rmpc -c {settings["dirs"]["CONFIG"]}/rmpc/config.ron")
+
 #### BAR ####
 screens = [
     Screen(
@@ -78,6 +81,17 @@ screens = [
                 widget.Image(
                     filename=f'{images}/1.png',
 
+                ),
+                widget.Mpd2(
+                    status_format="{play_status}",
+                    idle_format='{play_status}',
+                    play_states={'pause': ' ', 'play': ' ', 'stop': ' '},
+                    mouse_callbacks={'Button3': open_rmpc},
+                    mouse_buttons={1: 'toggle', 3: None, 4: 'previous', 5: 'next'},
+                    font="Symbols Nerd Font"
+                ),
+                widget.Image(
+                    filename=f'{images}/1.png',
                 ),
                 widget.Prompt(prompt="{prompt}: "),
                 # widget.WindowName(),
