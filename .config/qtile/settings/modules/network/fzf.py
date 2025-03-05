@@ -44,7 +44,7 @@ def menu():
     with open(f"{dir_path}/{current_conection[1]}", 'a') as file:
         file.write("\033[47m\033[30m" + output + "\033[0m")
 
-    fzf = f"cd {dir_path} && fzf --header='Networks:{" "*10}Current: {current_conection[1]}' --preview 'cat {{}}' --bind 'focus:transform-preview-label:echo {{+}}'"
+    fzf = f"cd {dir_path} && fzf --header='󰤨 Networks:{" "*10}Current: {current_conection[1]}' --preview 'cat {{}}' --bind 'focus:transform-preview-label:echo {{+}}'"
     ssids = [item['SSID'] for item in items]
 
     process = subprocess.Popen(
