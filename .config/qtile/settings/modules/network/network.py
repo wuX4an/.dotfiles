@@ -65,21 +65,20 @@ def connect(ssid, password):
 # print(connect("LIB-6378456"))
 
 def current_conection():
-
     current_connection = subprocess.Popen(
         "nmcli device wifi show-password | grep SSID | awk -F: '{print $2}'",
         stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, text=True
     )
     output, errors = current_connection.communicate()
     if errors:
-        return errors
+        return [1, None]
     else:
-        return output.strip()
+        return [0, output.strip()]
 # print(current_conection())
 
 def show_password():
     show_password = subprocess.Popen(
-        "nmcli device wifi show-password | head -n 3 | tail -n 1",
+        "nmcli device wifi show-password | head -n 3 | tail -n 1 | awk -F: '{print $2}'",
         stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, text=True
     )
     output, errors = show_password.communicate()
@@ -87,3 +86,16 @@ def show_password():
         return errors
     else:
         return output.strip()
+# print(show_password())
+
+def show_security():
+    show_security = subprocess.Popen(
+        "nmcli device wifi show-password | head -n 2 | tail -n 1 | awk -F: '{print $2}'",
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, text=True
+    )
+    output, errors = show_security.communicate()
+    if errors:
+        return errors
+    else:
+        return output.strip()
+
