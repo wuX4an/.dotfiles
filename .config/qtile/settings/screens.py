@@ -27,6 +27,9 @@ def open_bluetui():
 def open_rmpc():
     qtile.cmd_spawn(f"{open_in_term} rmpc -c {settings["dirs"]["CONFIG"]}/rmpc/config.ron")
 
+def open_nmpy():
+    qtile.cmd_spawn(f"{open_in_term} python3 {settings["dirs"]["SETTINGS"]}/modules/network/fzf.py")
+
 #### BAR ####
 screens = [
     Screen(
@@ -119,6 +122,7 @@ screens = [
                 ),
                 widget.GenPollText(
                     func=wifi,
+                    mouse_callbacks={"Button1": open_nmpy},
                     update_interval=5,
                     font="Symbols Nerd Font",
                     fontsize=18,

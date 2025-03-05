@@ -1,4 +1,5 @@
 ## Dependencias:
++ fzf
 + picom-pijulius
 + kitty
 + dunst
