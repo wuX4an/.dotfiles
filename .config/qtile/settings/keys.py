@@ -73,7 +73,7 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(
-        [mod],
+        [],
         "f11",
         lazy.window.toggle_fullscreen(),
         desc="Toggle fullscreen on the focused window",
