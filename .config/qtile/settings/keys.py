@@ -69,6 +69,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(settings["terminal"]["DEFAULT"]), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "d", lazy.spawn(settings["rofi"]["DEFAULT"]), desc="Open rofi"),
+    Key([mod, "shift"], "s", lazy.spawn("flameshot gui"), desc="Take a screenshot"),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(
