@@ -5,6 +5,9 @@
 + dunst
 + font Deaparture Mono, source-han-mono
 + python3Packages.qrcode
++ xclip
++ stow
++ git
 ### SONIDO
 + playerclt
 + pulsemixer
