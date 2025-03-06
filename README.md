@@ -21,8 +21,8 @@
 + mpc
 + alsa-utils
 ### MENUS
-rofi (apss)
-bluetui (bluetooth)
++ rofi (apss)
++ bluetui (bluetooth)
 ### ICONOS
-papirus-icon-theme
-bibata-cursors
++ papirus-icon-theme
++ bibata-cursors
