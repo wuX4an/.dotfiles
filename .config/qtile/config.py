@@ -92,7 +92,7 @@ reconfigure_screens = True
 auto_minimize = True
 
 # Groups
-labels = ["󰎦", "󰎩", "󰎬", "󰎮", "󰎰", "󰎵", "󰎸", "󰎻", "󰎾"]
+labels = ["󰎦", "󰎩", "󰎬", "󰎮", "󰎰", "󰎵", "󰎸", "󰎻", "󰎾 "]
 # labels = ["一", "二", "三", "四", "五", "六", "七", "八", "九"]
 
 groups = [Group(f"{i+1}", label=labels[i]) for i in range(9)]
