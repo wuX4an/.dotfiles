@@ -65,7 +65,7 @@ screens = [
                     other_current_screen_border='#343F44',
                     other_screen_border='#343F44',
                     urgent_border='#343F44',
-                    # font="Source Han Mono",
+                    font="Departure Mono",
                     fontsize=18,
                     # padding=0
                 ),
@@ -89,9 +89,10 @@ screens = [
                     status_format="{play_status}",
                     idle_format='{play_status}',
                     play_states={'pause': ' ', 'play': ' ', 'stop': ' '},
+                    no_connection=" ",
                     mouse_callbacks={'Button3': open_rmpc},
                     mouse_buttons={1: 'toggle', 3: None, 4: 'previous', 5: 'next'},
-                    font="Symbols Nerd Font"
+                    font="Symbols Nerd Font",
                 ),
                 widget.Image(
                     filename=f'{images}/1.png',

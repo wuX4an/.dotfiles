@@ -19,7 +19,7 @@ def settings():
     ROFI_DEFAULT = f"rofi -config {CONFIG}/rofi/config.rasi -show drun"
     # WIDGET DEFAULTS
     WIDGET_DEFAULTS = dict(
-       font="Departure Mono Bold",
+        font="Departure Mono Bold",
         fontsize=14,
         padding=3,
         background='#343F44',
