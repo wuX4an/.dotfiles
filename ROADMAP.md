@@ -8,8 +8,9 @@
 + [ ] añadir un tui para usb
 + [ ] añadir un tui para xrandr
 + [ ] arreglar el markdow
-+ [ ] añadir el configuration.nix al readme.md
++ [X] añadir el configuration.nix al readme.md
 + [ ] añadir un link simbolico de la configuración de kitty
++ [ ] perzonalizar la terminal
 
 + [X] Ordenar todo
 ``` bash
