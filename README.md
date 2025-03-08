@@ -97,6 +97,11 @@
     ffmpeg
   ];
 ```
+**Enable fish**
+``` nix
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
+```
 **Fonts**
 ``` nix
   fonts = {
