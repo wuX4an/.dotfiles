@@ -166,6 +166,8 @@ nix-shell -p stow --run "stow ."
 ### 5: install fish plugins
 ``` bash
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"
+# My tide fish config:
+tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time=No --lean_prompt_height='One line' --prompt_spacing=Compact --icons='Many icons' --transient=Yes
 ```
 
 > [!NOTE]
