@@ -189,6 +189,7 @@
     git
     stow
     ffmpeg
+    gcc
   ];
 
   # Fonts
