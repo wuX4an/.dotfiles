@@ -156,6 +156,10 @@ rm -rf ~/.profile
 cd ~/.dotfiles
 nix-shell -p stow --run "stow ."
 ```
+### 5: install fish plugins
+``` bash
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"
+```
 
 > [!NOTE]
 > You can view the [ROADMAP](ROADMAP.md).

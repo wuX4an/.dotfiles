@@ -129,6 +129,9 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  # Install fish
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -165,6 +168,10 @@
     bibata-cursors
     # Terminal
     kitty
+    # Shell
+    eza
+    zoxide
+    rmtrash
     # Editor
     neovim
     # Notification
