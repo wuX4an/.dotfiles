@@ -117,6 +117,12 @@
     ];
   };
 ```
+**Enable automount disks**
+``` nix
+  services.devmon.enable = true;
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+```
 **Some games needed this libs (optional)**
 ``` nix
   programs.nix-ld.enable = true;
