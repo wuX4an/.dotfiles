@@ -22,6 +22,13 @@
 </sup>
 ![mpd](assets/mpd.png)
 
+**Themed neovim:**
+<sup>
+  I make a fork of [neanias](https://github.com/neanias/everforest-nvim) and I make transparent background.
+</sup>
+![neovim](assets/neovim.png)
+
+
 **Cutest experience:**
 <sup>
   The animation and the wallpapers are the most cozy and soft.
