@@ -160,6 +160,8 @@ mv ~/.config/flameshot ~/.config/flameshot-bk
 mv ~/.themes ~/.themes-bk
 mv ~/.Xresources ~/.Xresources-bk
 mv ~/.profile ~/.profile-bk
+mv ~/.config/fish ~/.config/fish-bk
+mv ~/.config/nvim ~/.config/nvim-bk
 # Remove
 rm -rf ~/.config/qtile
 rm -rf ~/.config/gtk-3.0
@@ -167,6 +169,8 @@ rm -rf ~/.config/flameshot
 rm -rf ~/.themes
 rm -rf ~/.Xresources
 rm -rf ~/.profile
+rm -rf ~/.config/fish
+rm -rf ~/.config/nvim
 ```
 
 ### 4: Link the files inside the .dotfiles directory
