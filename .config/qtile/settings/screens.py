@@ -163,7 +163,7 @@ screens = [
                 ),
                 widget.Backlight(
                     fmt="{}",
-                    backlight_name="intel_backlight",
+                    backlight_name="amdgpu_bl1",
                     change_command="brightnessctl set {}%",
                 ),
                 widget.Image(
