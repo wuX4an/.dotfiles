@@ -167,6 +167,17 @@ screens = [
                     change_command="brightnessctl set {}%",
                 ),
                 widget.Image(
+                    filename=f"{images}/2.png",
+                ),
+                widget.Battery(
+                    discharge_char="󰂀",
+                    charge_char="󰂄",
+                    empty_char="󰂎",
+                    full_char="󱈑",
+                    update_interval=1,
+                    format='{char} {percent:2.0%}'
+                ),
+                widget.Image(
                     filename=f"{images}/5.png",
                     background="#353446",
                 ),
