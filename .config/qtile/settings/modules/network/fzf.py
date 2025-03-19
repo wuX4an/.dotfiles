@@ -11,7 +11,7 @@ def menu():
     os.makedirs(dir_path, exist_ok=True)
 
     for wifi in items:
-        ssid = wifi["SSID"]
+        ssid = wifi["SSID"].replace("/", "-")
         file_path = os.path.join(dir_path, f"{ssid}")
         data = f"SSID: {wifi['SSID']}\nRATE: {wifi['RATE']}\nSIGNAL: {wifi['BARS']}\nSECURITY: {wifi['SECURITY']}\n\n"
 
