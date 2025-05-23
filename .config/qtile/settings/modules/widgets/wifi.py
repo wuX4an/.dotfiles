@@ -13,7 +13,7 @@ def wifi():
         if result:
             network = "󰤨"
         else:
-            network = "󰤮"
+            return "󰤮"
     except Exception:
         return "󰤮"
 
