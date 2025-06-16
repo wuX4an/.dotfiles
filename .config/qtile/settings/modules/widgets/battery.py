@@ -1,29 +1,27 @@
 import subprocess
 
 
+import subprocess
+
 def get_battery_percent():
-    command = "upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | awk '{print $2}'"
+    command = "cat /sys/class/power_supply/BAT1/capacity"
     process = subprocess.Popen(
         command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
     )
     stdout, stderr = process.communicate()
-    if stderr:
+    if stderr or not stdout.strip().isdigit():
         return 0
-    percent_int = int(stdout.replace("%", ""))
-    return percent_int
-
+    return int(stdout.strip())
 
 def get_battery_state():
-    command = "upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep state | awk '{print $2}'"
+    command = "cat /sys/class/power_supply/BAT1/status"
     process = subprocess.Popen(
         command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
     )
     stdout, stderr = process.communicate()
     if stderr:
-        return 0
-    state = stdout.strip()
-    return state
-
+        return "Unknown"
+    return stdout.strip().lower()
 
 def battery():
     percent = get_battery_percent()
