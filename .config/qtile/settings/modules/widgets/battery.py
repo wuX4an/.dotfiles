@@ -1,8 +1,5 @@
 import subprocess
 
-
-import subprocess
-
 def get_battery_percent():
     command = "cat /sys/class/power_supply/BAT1/capacity"
     process = subprocess.Popen(
@@ -29,7 +26,7 @@ def battery():
 
     # Charging
     if percent >= 90 and status == "charging":
-        return "󰂄 "
+        return "󰂅 "
     elif percent >= 80 and status == "charging":
         return "󰂊 "
     elif percent >= 60 and status == "charging":
@@ -42,7 +39,7 @@ def battery():
         return "󰢟 "
     # Discharging
     elif percent >= 90 and status == "discharging":
-        return "󱈑 "
+        return "󰁹 "
     elif percent >= 80 and status == "discharging":
         return "󰂁 "
     elif percent >= 60 and status == "discharging":
@@ -53,3 +50,6 @@ def battery():
         return "󰁻 "
     elif percent < 20 and status == "discharging":
         return "󱃍 "
+
+def percent():
+    return f"{get_battery_percent()}%"

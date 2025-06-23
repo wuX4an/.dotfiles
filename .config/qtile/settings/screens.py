@@ -6,7 +6,7 @@ from libqtile import qtile
 
 from .modules.widgets.wifi import wifi
 from .modules.widgets.bluetooth import bluetooth
-from .modules.widgets.battery import battery
+from .modules.widgets.battery import percent, battery
 
 import os
 from settings import settings
@@ -178,8 +178,10 @@ screens = [
                     fontsize=16,
                     fmt="{}",
                 ),
-                widget.Battery(
-                    format="{percent:2.0%}",
+                widget.GenPollText(
+                    func=percent,
+                    update_interval=1,
+                    fmt="{}",
                 ),
                 widget.Image(
                     filename=f"{images}/5.png",
