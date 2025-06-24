@@ -48,7 +48,7 @@ def battery():
         return "󰁽 "
     elif percent >= 20 and status == "discharging":
         return "󰁻 "
-    elif percent < 20 and status == "discharging":
+    elif percent <= 20 and status == "discharging":
         return "󱃍 "
 
 def percent():
