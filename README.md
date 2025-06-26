@@ -89,8 +89,11 @@
     python3Packages.qrcode
     # X11
     xclip
-    flameshot
     xdg-utils
+    # Screenshot
+    satty
+    xdotool
+    xorg.xdpyinfo
     # Misc
     git
     stow
