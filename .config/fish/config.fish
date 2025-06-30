@@ -6,6 +6,7 @@ zoxide init fish | source
 # Exports:
 export SUDO_PROMPT="passwd: "
 export EDITOR="nvim"
+export TERM="xterm-256color"
 
 # Alias:
 alias ls="eza --color --sort=type --icons -1"
