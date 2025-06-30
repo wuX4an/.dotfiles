@@ -94,6 +94,11 @@
     satty
     xdotool
     xorg.xdpyinfo
+    # Yazelix
+    zellij
+    helix
+    nushell
+    yazi
     # Misc
     git
     stow
@@ -195,4 +200,4 @@ tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time=No --
 + [Darkkal44](https://github.com/Darkkal44/Cozytile) -> Cozytile, inspired me a lot
 + [kurealnum](https://github.com/kurealnum/dotfiles/blob/main/.config/picom/picom.conf) -> picom config
 + [gh0stzk](https://github.com/gh0stzk/dotfiles/blob/master/config/bspwm/src/ScreenLocker) -> lockscreen
-
++ [luccahuguet](https://github.com/luccahuguet/yazelix) -> yazelix
