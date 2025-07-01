@@ -1,0 +1,41 @@
+theme = "everforest"
+
+[editor]
+line-number = "absolute"
+mouse = true
+gutters = ["diagnostics", "line-numbers", "spacer", "spacer"]
+true-color = true
+color-modes = true
+cursorline = true
+end-of-line-diagnostics = "hint"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner", "read-only-indicator", "file-modification-indicator"]
+center = ["file-name"]
+right = ["diagnostics", "version-control", "spacer", "position", "spacer", "position-percentage", "spacer", "file-type"]
+separator = ""
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 0
+wrap-indicator = ""  # set wrap-indicator to "" to hide it
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
