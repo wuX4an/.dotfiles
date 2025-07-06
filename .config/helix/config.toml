@@ -39,3 +39,11 @@ skip-levels = 1
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
+
+[keys.normal]
+y = ":clipboard-yank"
+p = ":clipboard-paste-replace"
+
+[keys.select]
+y = ":clipboard-yank"
+p = ":primary-clipboard-paste-replace"
