@@ -34,7 +34,7 @@ wrap-indicator = ""  # set wrap-indicator to "" to hide it
 
 [editor.indent-guides]
 render = true
-character = "|"
+character = "│"
 skip-levels = 1
 
 [editor.inline-diagnostics]
