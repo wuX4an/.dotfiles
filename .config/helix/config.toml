@@ -42,7 +42,7 @@ cursor-line = "warning"
 
 [keys.normal]
 y = ":clipboard-yank"
-p = ":clipboard-paste-replace"
+p = ":clipboard-paste-before"
 
 [keys.select]
 y = ":clipboard-yank"
