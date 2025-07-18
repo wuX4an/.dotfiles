@@ -60,6 +60,14 @@ widget_defaults = settings["widget_defautls"]["DEFAULT"]
 def suspend():
     qtile.spawn(f"{scripts}/lockscreen.sh")
 
+# Eww widget
+@hook.subscribe.client_focus
+@hook.subscribe.client_managed
+def always_raise_eww(_):
+    try:
+        subprocess.Popen(["eww", "reload"])
+    except Exception as e:
+        print("Error elevando Eww:", e)
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list

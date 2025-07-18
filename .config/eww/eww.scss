@@ -1,0 +1,12 @@
+.activate-linux {
+  color: rgba(250, 250, 250, 0.5);
+  font-weight: bold;
+
+  &.background {
+    background: none;
+  }
+}
+
+* {
+  font-family: "Iosevka", monospace;
+}

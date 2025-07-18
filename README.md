@@ -84,6 +84,8 @@
     dunst
     # Compositor
     picom-pijulius
+    # Widgets
+    eww
     # Python
     python3Full
     python3Packages.qrcode
