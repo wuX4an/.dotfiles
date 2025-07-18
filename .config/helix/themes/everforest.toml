@@ -17,10 +17,11 @@
 "keyword.control.conditional" = { fg = "red" }
 "keyword.control.import" = { fg = "red-light" }
 "keyword.control.return" = { fg = "blue" }
-"keyword.control.repeat" = { fg = "yellow-light" }
+"keyword.control.repeat" = { fg = "#dbbc7f" }
 "keyword.control.exception" = { fg = "black-light" }
+"keyword.storage.modifier" = { fg = "magenta" }
 "label" = { fg = "blue" }
-"namespace" = { fg = "red-light" }
+"namespace" = { fg = "yellow" }
 "operator" = { fg = "white" }
 "punctuation.bracket" = { fg = "white" }
 "punctuation.delimiter" = { fg = "white" }
@@ -31,12 +32,12 @@
 "string.special" = { fg = "blue" }
 "string.special.symbol" = { fg = "red" }
 "tag" = { fg = "blue" }
-"type" = { fg = "yellow" }
+"type" = { fg = "#d3c6aa" }
 "type.builtin" = { fg = "yellow" }
-"variable" = { fg = "white" }
-"variable.builtin" = { fg = "blue" }
-"variable.parameter" = { fg = "red" }
-"variable.other.member" = { fg = "red" }
+"variable" = { fg = "#d98c65" }
+"variable.builtin" = { fg = "#d98c65" }
+"variable.parameter" = { fg = "#d98c65" }
+"variable.other.member" = { fg = "#d98c65" }
 
 "diff.plus" = { fg = "blue" }
 "diff.delta" = { fg = "magenta" }
